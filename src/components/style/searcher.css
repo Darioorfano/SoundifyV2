@@ -1,0 +1,34 @@
+.input-group {
+    width: 80vw;
+    margin: auto;
+}
+
+#searcher {
+    border-radius: 10px;
+}
+
+#lupaBuscador {
+    position: absolute;
+    bottom: 0.2em;
+    left: 0.5em;
+    font-size: 1.2em;
+    z-index: 2;
+    padding-right: 1em;
+}
+
+@media (min-width:576px) {
+    .input-group {
+        margin: auto;
+    }
+
+    #searcher {
+        width: 80vw;
+    }
+}
+
+@media (min-width:992px) {
+    #searcher {
+        width: 40vw;
+        margin-top: 2.5em;
+    }
+}

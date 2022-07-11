@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Home from './views/Home';
+import { Route} from 'react-router';
+import { BrowserRouter as Router,Routes } from 'react-router-dom';
+import Registro from './views/Registro';
+import Login from './views/Login';
+import SoundifyHome from './views/SoundifyHome';
+import SoundifyPlayer from './views/SoundifyPlayer';
+import SoundifyPlaylists from './views/SoundifyPlaylists';
+import SoundifySearch from './views/SoundifySearch';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+   
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login/>}>
+          </Route>
+          <Route path="/registro" element={<Registro/>}>
+          </Route>
+        
+          <Route path="/d" element={<SoundifyHome/>}>
+          </Route>
+          <Route path="/a" element={<SoundifyPlayer/>}>
+          </Route>
+          <Route path="/b" element={<SoundifyPlaylists/>}>
+          </Route>
+          <Route path="/c" element={<SoundifySearch/>}>
+          </Route>
+        
+          <Route path="/" element={<Home/>}>
+          </Route>
+        </Routes>
+      </Router>
+    </>
+
+  )
 }
 
 export default App;

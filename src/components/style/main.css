@@ -1,0 +1,41 @@
+.title-index {
+    font-weight: bolder;
+    font-size: 3.5em;
+}
+
+.contenedor-principal {
+    height: 100vh;
+    background-color: rgb(44, 43, 43);
+}
+
+.contenedor-principal p {
+    font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+    .title-index {
+
+        font-size: 4em;
+    }
+
+    .contenedor-principal p {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedor-principal p {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .title-index {
+        font-weight: bolder;
+        font-size: 6.5em;
+    }
+
+    .contenedor-principal p {
+        font-size: 2em;
+    }
+}

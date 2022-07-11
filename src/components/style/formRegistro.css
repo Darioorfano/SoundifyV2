@@ -1,0 +1,24 @@
+.title-register {
+    font-size: 2em;
+    margin-top: 2.5em;
+    font-weight: bold;
+    position: relative;
+    animation: slideDown 3s;
+
+}
+
+.form-group label {
+    display: flex;
+    font-weight: bold;
+
+}
+
+@keyframes slideDown {
+    from {
+        left: -100vw;
+    }
+
+    to {
+        left: 0;
+    }
+}
