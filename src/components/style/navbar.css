@@ -24,7 +24,7 @@ background-color: rgb(211, 126, 8);
 }
 
 .nav-item{
-  font-size:2em;
+  font-size:1.5em;
 }
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {

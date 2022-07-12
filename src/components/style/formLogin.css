@@ -2,3 +2,11 @@
     display: flex;
     font-weight: bold;
 }
+.btn-iniciarSesion{
+    background-color: rgb(236, 154, 2)!important;
+}
+.btn-register{
+background-color: rgb(207, 136, 4)!important;
+
+
+}
