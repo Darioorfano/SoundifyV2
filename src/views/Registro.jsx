@@ -1,13 +1,16 @@
 import React from "react";
 import FormRegistro from "../components/FormRegistro";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import NavbarDesktop from "../components/NavbarDesktop";
+import NavbarMobile from "../components/NavbarMobile";
 
 export default function Registro() {
 
     return (<>
         <div>
-            <Navbar></Navbar>
+            
+            <NavbarDesktop/>
+            <NavbarMobile/>
 
             <FormRegistro></FormRegistro>
 

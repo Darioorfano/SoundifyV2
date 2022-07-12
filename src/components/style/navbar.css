@@ -1,47 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-
-
+   
+   
 /*Hasta 768 px mobile*/
 /*Min-width desde 768px se aplica el estilo tablet */
 
-.logo {
-  font-size: 2.5em;
-  font-family: 'Bree Serif', serif;
+.logo{
+font-size: 2.5em !important;
+font-family: 'Bree Serif', serif;
+}
+.bi-soundwave{
+border-radius: 50%;
+width: 30%;
+background-color: white;
+height: 10%;
+color:rgb(255, 150, 0);
 }
 
-.bi-soundwave {
-  border-radius: 50%;
-  width: 30%;
-  background-color: white;
-  height: 10%;
-  color: rgb(255, 150, 0);
+.navbar{
+background-color: rgb(255, 150, 0);
+}
+.navbar-toggler{
+background-color: rgb(211, 126, 8);
 }
 
-.navbar {
-  background-color: rgb(255, 150, 0);
+.nav-item{
+  font-size:2em;
 }
-
-.navbar-toggler {
-  background-color: rgb(211, 126, 8);
-}
-
-.nav-item {
-  font-size: 2em;
-}
-
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-  .nav-item {
-    font-size: 1.6em;
-  }
+.nav-item{
+font-size: 1.6em;
 }
-
+}
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  .nav-item {
-    font-size: 1.2em;
-  }
+.nav-item{
+font-size: 1.2em;
 }
-
+}
 /* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) { }
