@@ -36,7 +36,9 @@ font-size: 1.6em;
 @media (min-width: 992px) {
 .nav-item{
 font-size: 1.2em;
+
 }
+
 }
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { }

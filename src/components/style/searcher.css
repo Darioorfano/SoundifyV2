@@ -5,12 +5,13 @@
 
 #searcher {
     border-radius: 10px;
+    width: 300px;
 }
 
 #lupaBuscador {
     position: absolute;
     bottom: 0.2em;
-    left: 0.5em;
+    right: 0.5em;
     font-size: 1.2em;
     z-index: 2;
     padding-right: 1em;
@@ -20,15 +21,16 @@
     .input-group {
         margin: auto;
     }
-
     #searcher {
-        width: 80vw;
+        
+        width: 400px;
     }
+    
 }
 
 @media (min-width:992px) {
     #searcher {
-        width: 40vw;
+        
         margin-top: 2.5em;
     }
 }

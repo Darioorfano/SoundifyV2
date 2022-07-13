@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './style/searcher.css';
 
-export default function Searcher({carga}) {
+export default function Searcher({canciones=[]}) {
   const [cancion, setCancion] = useState("");
-
-
-  const getCancion = async (nombre) => {
+  
+  
+  
+  const getCancion =  (nombre) => {
     const options = {
       method: 'GET',
       headers: {
@@ -19,8 +20,11 @@ export default function Searcher({carga}) {
        
       )
       .then(response =>{
-        console.log(response)
-        carga(response)
+      console.log(response)
+      
+      
+        
+
       } 
         )
       
@@ -30,19 +34,17 @@ export default function Searcher({carga}) {
   }
 
   useEffect(() => {
-   
+    if(cancion != ""){
       getCancion(cancion)
+    }
+     
 
-    
-   
-
-
-  }, [cancion])
+  }, [cancion,])
 
 
   return (
     <>
-      <nav className="searcher">
+      <nav className="searcher  mt-5 d-flex m-auto" id="searcher">
         <form className="form-inline d-flex m-auto">
           <div className="input-group">
             <div className="input-group-prepend">
@@ -55,6 +57,26 @@ export default function Searcher({carga}) {
               value={cancion} onChange={(e) => setCancion(e.target.value)} placeholder="Buscar Artistas o canciones"
 
             />
+       
+        <>
+            <div className="container">
+                {
+                    canciones == null? <></>:
+                    <>
+                       {Object.keys(canciones).map( key=> {
+                        let cancion1 = canciones[key]
+                        return(
+                            <div key={cancion1.title}>
+                            
+                        </div>
+                        )
+                       })}
+                    </>
+                }
+            </div>
+
+
+        </>
           </div>
         </form>
       </nav>

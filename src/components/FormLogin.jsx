@@ -23,6 +23,10 @@ export default function FormLogin() {
                                     <div className="d-grid">
                                         <Link to="/soundifyHome" className="btn btn-iniciarSesion mt-4 pt-3 pb-3 pl-5 pr-5 mb-5 mt-2 mb-2 text-light" >INICIAR SESION</Link>
                                     </div>
+                                    <div className="d-grid">
+                                    <h6 className=" text-center">¿No tenés cuenta?</h6>
+                                    <Link to="/registro" className="btn btn-register text-light m-auto  w-100  pt-3 pb-3 pl-5 pr-5 mt-2 mb-4">REGISTRARSE</Link>
+                                    </div>
                                 </form>
                             </div>
                         </div>

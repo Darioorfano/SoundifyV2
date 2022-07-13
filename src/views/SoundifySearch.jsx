@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import NavbarDesktop from "../components/NavbarDesktop";
 import Searcher from "../components/Searcher";
 import NavbarMobile from "../components/NavbarMobile";
@@ -13,6 +13,7 @@ export default function SoundifySearch() {
   }
 
 
+
   return (<>
     <div>
       <NavbarDesktop></NavbarDesktop>
@@ -20,8 +21,8 @@ export default function SoundifySearch() {
 
         <h1 className="pt-5 mb-4 text-white d-lg-none">Buscar</h1>
 
-
-        <Searcher carga={cargarCanciones} ></Searcher>
+        <Searcher canciones={canciones} setCancion={setCanciones}  ></Searcher>
+     
         <section className="mt-2">
           <p className="pt-5 text-white last-searches-title">Últimas búsquedas</p>
           <div className="row-fluid d-flex">

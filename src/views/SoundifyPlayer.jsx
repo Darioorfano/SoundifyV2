@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarDesktop from "../components/NavbarDesktop";
 import Searcher from "../components/Searcher";
+import NavbarMobile from "../components/NavbarMobile";
 export default function SoundifyPlayer() {
 
     return (<>
@@ -12,9 +13,9 @@ export default function SoundifyPlayer() {
 
 
             </main>
-
+            <NavbarMobile></NavbarMobile>
         </div>
-
+     
     </>)
 
 }
