@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './style/searcher.css';
 
-export default function Searcher({canciones=[]}) {
-  const [cancion, setCancion] = useState("");
+export default function Searcher({carga}) {
   
-  
+  const [cancion, setCancion] = useState([]);
   
   const getCancion =  (nombre) => {
     const options = {
@@ -16,14 +15,12 @@ export default function Searcher({canciones=[]}) {
     };
 
     fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${nombre}`, options)
-      .then(response => response.json()
-       
+      .then(response => 
+        response.json()
       )
       .then(response =>{
-      console.log(response)
-      
-      
-        
+      carga(response.data)
+   
 
       } 
         )
@@ -35,17 +32,22 @@ export default function Searcher({canciones=[]}) {
 
   useEffect(() => {
     if(cancion != ""){
-      getCancion(cancion)
+    
+      getCancion(cancion);
+    
+    }else{
+      carga([]);
+
     }
      
 
-  }, [cancion,])
+  }, [cancion])
 
 
   return (
-    <>
-      <nav className="searcher  mt-5 d-flex m-auto" id="searcher">
-        <form className="form-inline d-flex m-auto">
+    <div className='mb-4'>
+     
+        <form className="form-inline d-flex m-auto" id="searcher">
           <div className="input-group">
             <div className="input-group-prepend">
               <i className="bi bi-search " id="lupaBuscador"></i>
@@ -58,29 +60,10 @@ export default function Searcher({canciones=[]}) {
 
             />
        
-        <>
-            <div className="container">
-                {
-                    canciones == null? <></>:
-                    <>
-                       {Object.keys(canciones).map( key=> {
-                        let cancion1 = canciones[key]
-                        return(
-                            <div key={cancion1.title}>
-                            
-                        </div>
-                        )
-                       })}
-                    </>
-                }
-            </div>
-
-
-        </>
           </div>
         </form>
-      </nav>
-    </>
+     
+    </div>
   )
 
 }

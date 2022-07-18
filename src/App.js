@@ -6,7 +6,6 @@ import { BrowserRouter as Router,Routes } from 'react-router-dom';
 import Registro from './views/Registro';
 import Login from './views/Login';
 import SoundifyHome from './views/SoundifyHome';
-import SoundifyPlayer from './views/SoundifyPlayer';
 import SoundifyPlaylists from './views/SoundifyPlaylists';
 import SoundifySearch from './views/SoundifySearch';
 
@@ -24,13 +23,10 @@ function App() {
         
           <Route path="/d" element={<SoundifyHome/>}>
           </Route>
-          <Route path="/a" element={<SoundifyPlayer/>}>
-          </Route>
           <Route path="/b" element={<SoundifyPlaylists/>}>
           </Route>
           <Route path="/c" element={<SoundifySearch/>}>
           </Route>
-        
           <Route path="/" element={<Home/>}>
           </Route>
         </Routes>

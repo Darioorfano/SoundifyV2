@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import NavbarDesktop from "../components/NavbarDesktop";
 import Searcher from "../components/Searcher";
 import NavbarMobile from "../components/NavbarMobile";
@@ -15,45 +15,50 @@ export default function SoundifySearch() {
 
 
   return (<>
-    <div>
+    <div >
       <NavbarDesktop></NavbarDesktop>
-      <main>
+      <main className="bg-dark vh-100">
 
-        <h1 className="pt-5 mb-4 text-white d-lg-none">Buscar</h1>
+        <h1 className="text-light text-center pt-5  d-lg-none">Buscar</h1>
 
-        <Searcher canciones={canciones} setCancion={setCanciones}  ></Searcher>
-     
+        <Searcher carga={cargarCanciones} />
+
         <section className="mt-2">
-          <p className="pt-5 text-white last-searches-title">Últimas búsquedas</p>
-          <div className="row-fluid d-flex">
+
+          <div className="d-flex flex-column container bg-dark">
 
             {
-              canciones == null ? <></> :
+              canciones === [] ? <></> :
                 <>
-                  <div className="col-4 img-column">
-                    <p className="text-white">Imagen</p>
-                  </div>
-                  <div className="col-4 song_Name">
-                    {canciones.map(index => {
+                  {canciones.map((cancion, index) => {
 
-                      return <p className="text-white">Nombre {index.title}</p>
+                    return (
+                      <div className="d-flex gap-2 mb-4
+                        " key={index}>
 
-
-                    })}
+                        <img src={cancion.album.cover_small} alt="" />
 
 
+                        <div>
+                          <p className="text-light m-0">{cancion.title}</p>
+                          <p className="text-light  m-0">{cancion.artist.name}</p>
+                        </div>
+
+
+                      </div>
+                    )
 
 
 
-                  </div>
+                  })}
+
+
 
                 </>
 
             }
 
-            <div className="col-4 cross">
-              <i className="bi bi-x text-white"></i>
-            </div>
+
           </div>
         </section>
 
