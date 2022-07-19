@@ -14,7 +14,7 @@ export default function Searcher({carga}) {
       }
     };
 
-    fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${nombre}`, options)
+    fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${nombre}&limit=10`, options)
       .then(response => 
         response.json()
       )

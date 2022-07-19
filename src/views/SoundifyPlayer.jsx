@@ -1,18 +1,22 @@
-import React from "react";
+import React,{useState} from "react";
 import NavbarDesktop from "../components/NavbarDesktop";
-import NavbarMobile from "../components/NavbarMobile";
-export default function SoundifyPlayer() {
+import Player from "../components/Player";
 
+export default function SoundifyPlayer() {
+    const [modo, setModo] = useState("track")
+    const[id,setId]=useState("1109731");
     return (<>
         <div>
             <NavbarDesktop></NavbarDesktop>
 
             <main>
           
-
+            { id == null? <></>:
+            <Player modo={modo} id={id}></Player>
+            }
 
             </main>
-            <NavbarMobile></NavbarMobile>
+         
         </div>
      
     </>)
