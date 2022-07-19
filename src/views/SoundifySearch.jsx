@@ -23,7 +23,7 @@ export default function SoundifySearch() {
 
         <Searcher carga={cargarCanciones} />
 
-        <section className="mt-2">
+        <section className="bg-dark mt-2">
 
           <div className="d-flex flex-column container bg-dark">
 
