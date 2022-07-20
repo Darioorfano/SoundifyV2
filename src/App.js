@@ -9,13 +9,14 @@ import SoundifyHome from './views/SoundifyHome';
 import SoundifyPlaylists from './views/SoundifyPlaylists';
 import SoundifySearch from './views/SoundifySearch';
 import SoundifyPlayer from './views/SoundifyPlayer';
-import NavbarMobile from './components/NavbarMobile';
-
+import { useHref } from 'react-router';
 function App() {
+
   return (
     <>
    
       <Router>
+      
         <Routes>
           <Route path="/login" element={<Login/>}>
           </Route>
@@ -36,14 +37,11 @@ function App() {
         { /*Se establece el navbarMobile y Player aca 
       para que cuando cambie de vista no se finalice
       la ejecucion*/ 
-      <>
-      
-      <SoundifyPlayer/>
-      <NavbarMobile />
-      
-      </>
+    
       
     }
+    <SoundifyPlayer/>
+      
       </Router>
     
     </>

@@ -109,7 +109,7 @@ return (<>
       </div>
     </main>
 
-    <NavbarMobile></NavbarMobile>
+    <NavbarMobile/>
   </div>
 
 </>)

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import NavbarDesktop from "../components/NavbarDesktop";
-import Searcher from "../components/Searcher";
 import NavbarMobile from "../components/NavbarMobile";
+import Searcher from "../components/Searcher";
+
 import '../components/style/soundifySearch.css';
 
 export default function SoundifySearch() {
@@ -63,7 +64,7 @@ export default function SoundifySearch() {
       </main>
 
 
-     
+            <NavbarMobile/>
     </div>
   </>)
 }
